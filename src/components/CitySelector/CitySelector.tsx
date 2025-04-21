@@ -1,4 +1,5 @@
-import { City } from "../types/weather";
+import { City } from "../../types/weather";
+import "./CitySelector.css";
 
 interface CitySelectorProps {
   cities: City[];

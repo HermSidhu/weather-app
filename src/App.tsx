@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
-import CitySelector from "./components/CitySelector";
-import CurrentWeather from "./components/CurrentWeather";
+import CitySelector from "./components/CitySelector/CitySelector";
+import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
 import Forecast from "./components/Forecast/Forecast";
 import WeatherAnimation from "./components/WeatherAnimation/WeatherAnimation";
 import { useWeather } from "./hooks/getWeather";

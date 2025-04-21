@@ -1,4 +1,5 @@
 import { CurrentWeather as CurrentWeatherType } from "../types/weather";
+import "./CurrentWeather.css"; // Import the CSS file
 
 interface CurrentWeatherProps {
   data: CurrentWeatherType | null;

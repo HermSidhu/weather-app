@@ -74,7 +74,7 @@ weather-app/
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:HermSidhu/weather-app.git
    cd weather-app
    ```
 
@@ -99,8 +99,7 @@ npm run dev
 
 This will start the server and display:
 
-- Local and network URLs for accessing the app
-- A QR code you can scan to open the app on your mobile device
+- Local URL for accessing the app
 
 ### 🏗️ Building for Production
 
