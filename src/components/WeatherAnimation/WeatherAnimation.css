@@ -1,0 +1,137 @@
+.weather-animation-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Animated clouds */
+.cloud {
+  position: absolute;
+  font-size: 60px;
+  opacity: 0.5;
+}
+
+.cloud-1 {
+  animation: float-right 60s infinite linear;
+  top: 10%;
+}
+
+.cloud-2 {
+  animation: float-left 45s infinite linear;
+  animation-delay: 10s;
+  top: 30%;
+  font-size: 50px;
+}
+
+.cloud-3 {
+  animation: float-right 75s infinite linear;
+  animation-delay: 25s;
+  top: 60%;
+  font-size: 40px;
+}
+
+/* Animated sun */
+.sun {
+  position: absolute;
+  font-size: 80px;
+  right: 10%;
+  top: 15%;
+  animation: pulse 8s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+/* Rain animation */
+.rain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="100" viewBox="0 0 20 100"><line x1="10" y1="0" x2="10" y2="20" style="stroke:rgba(255,255,255,0.5);stroke-width:2"/></svg>');
+  background-repeat: repeat;
+  animation: rain 0.8s linear infinite;
+}
+
+/* Snow animation */
+.snow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><circle cx="5" cy="5" r="2" fill="rgba(255,255,255,0.6)"/><circle cx="25" cy="15" r="1.5" fill="rgba(255,255,255,0.7)"/><circle cx="40" cy="30" r="2.5" fill="rgba(255,255,255,0.6)"/><circle cx="15" cy="35" r="1" fill="rgba(255,255,255,0.7)"/><circle cx="35" cy="5" r="1" fill="rgba(255,255,255,0.7)"/></svg>');
+  background-repeat: repeat;
+  animation: snow 10s linear infinite;
+}
+
+/* Lightning animation */
+.lightning {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: lightning 5s linear infinite;
+}
+
+/* Keyframes for animations */
+@keyframes float-right {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes float-left {
+  0% {
+    right: -10%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 50px 500px;
+  }
+}
+
+@keyframes lightning {
+  0%,
+  90%,
+  94%,
+  100% {
+    opacity: 0;
+  }
+  92%,
+  96% {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
